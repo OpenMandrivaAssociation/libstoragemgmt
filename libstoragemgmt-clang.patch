@@ -1,0 +1,25 @@
+diff -up libstoragemgmt-1.10.2/c_binding/include/libstoragemgmt/libstoragemgmt_plug_interface.h.omv~ libstoragemgmt-1.10.2/c_binding/include/libstoragemgmt/libstoragemgmt_plug_interface.h
+diff -up libstoragemgmt-1.10.2/c_binding/lsm_datatypes.cpp.omv~ libstoragemgmt-1.10.2/c_binding/lsm_datatypes.cpp
+--- libstoragemgmt-1.10.2/c_binding/lsm_datatypes.cpp.omv~	2025-02-28 00:58:26.618800755 +0100
++++ libstoragemgmt-1.10.2/c_binding/lsm_datatypes.cpp	2025-02-28 01:05:17.793682131 +0100
+@@ -1416,6 +1416,7 @@ int lsm_capability_set(lsm_storage_capab
+     return rc;
+ }
+ 
++#pragma GCC diagnostic ignored "-Wvarargs"
+ int lsm_capability_set_n(lsm_storage_capabilities *cap,
+                          lsm_capability_value_type v, ...) {
+     int rc = LSM_ERR_OK;
+diff -up libstoragemgmt-1.10.2/c_binding/lsm_datatypes.hpp.omv~ libstoragemgmt-1.10.2/c_binding/lsm_datatypes.hpp
+diff -up libstoragemgmt-1.10.2/c_binding/lsm_value_jsmn.hpp.omv~ libstoragemgmt-1.10.2/c_binding/lsm_value_jsmn.hpp
+--- libstoragemgmt-1.10.2/c_binding/lsm_value_jsmn.hpp.omv~	2025-02-28 01:05:42.004711341 +0100
++++ libstoragemgmt-1.10.2/c_binding/lsm_value_jsmn.hpp	2025-02-28 01:07:37.035496604 +0100
+@@ -266,7 +266,7 @@ Value lsm_parse(jsmntok_t *tok, int star
+             i += inc_token(i, 1, end_tok);
+             if (tok[i].type != JSMN_STRING) {
+                 throw ValueException("Expecting JSON object key to be string " +
+-                                     tok[i].type);
++                                     std::to_string(tok[i].type));
+             } else {
+                 std::string key(j + tok[i].start, tok[i].end - tok[i].start);
+                 i += inc_token(i, 1, end_tok);
