@@ -22,6 +22,7 @@ BuildRequires:	pkgconfig(libudev)
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(libconfig)
 BuildRequires:	sg3_utils-devel
+BuildRequires:	pkgconfig(bash-completion)
 BuildRequires:	python%{pyver}dist(pywbem)
 BuildRequires:	valgrind
 BuildRequires:	procps-ng
