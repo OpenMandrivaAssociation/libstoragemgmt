@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(ledmon)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(check)
 BuildRequires:	python%{pyver}dist(pywbem)
+BuildRequires:	valgrind
 BuildSystem:	autotools
 
 %patchlist
