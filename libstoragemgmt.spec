@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(ledmon)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(check)
+BuildRequires:	pkgconfig(libudev)
 BuildRequires:	python%{pyver}dist(pywbem)
 BuildRequires:	valgrind
 BuildRequires:	procps-ng
