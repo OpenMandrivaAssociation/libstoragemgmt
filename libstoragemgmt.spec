@@ -16,6 +16,7 @@ Group:		System/Libraries
 BuildRequires:	autoconf automake slibtool
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(ledmon)
+BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	python%{pyver}dist(pywbem)
 BuildSystem:	autotools
 
