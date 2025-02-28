@@ -19,6 +19,7 @@ BuildRequires:	pkgconfig(ledmon)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(check)
 BuildRequires:	pkgconfig(libudev)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pywbem)
 BuildRequires:	valgrind
 BuildRequires:	procps-ng
