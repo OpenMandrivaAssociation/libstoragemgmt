@@ -7,7 +7,7 @@
 
 Name:		libstoragemgmt
 Version:	1.10.2
-Release:	1
+Release:	2
 Source0:	https://github.com/libstorage/libstoragemgmt/archive/%{version}/%{name}-%{version}.tar.gz
 Summary:	Library for storage management
 URL:		https://github.com/libstorage/libstoragemgmt
