@@ -6,8 +6,8 @@
 %define _disable_ld_no_undefined 1
 
 Name:		libstoragemgmt
-Version:	1.10.2
-Release:	2
+Version:	1.10.3
+Release:	1
 Source0:	https://github.com/libstorage/libstoragemgmt/archive/%{version}/%{name}-%{version}.tar.gz
 Summary:	Library for storage management
 URL:		https://github.com/libstorage/libstoragemgmt
@@ -29,7 +29,7 @@ BuildRequires:	procps-ng
 BuildSystem:	autotools
 
 %patchlist
-libstoragemgmt-clang.patch
+# dropped (no longer applies): libstoragemgmt-clang.patch
 
 %description
 Library for Storage Management
